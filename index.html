@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="estilos.css" />
+  <title>Gestor de Tareas</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Mis Tareas</h2>
+      <select title="modo" id="themeToggle">
+        <option value="light">Claro</option>
+        <option value="dark">Oscuro</option>
+      </select>
+    </div>
+
+    <form id="taskForm" class="task-form">
+      <input type="text" id="taskText" placeholder="Escribe una tarea" required />
+      <input type="date" id="taskDate" title="prioridad" required />
+      <select id="taskPriority" title="dsas" required>
+        <option value="alta">Alta</option>
+        <option value="media">Media</option>
+        <option value="baja">Baja</option>
+      </select>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <div class="filters">
+      <button onclick="renderTasks('todas')">Todas</button>
+      <button onclick="renderTasks('completadas')">Completadas</button>
+      <button onclick="renderTasks('pendientes')">Pendientes</button>
+    </div>
+
+    <div id="taskList"></div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
